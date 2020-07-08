@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="FaboEditProgi.Views.FelosztasView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FaboEditProgi.Views"
+             mc:Ignorable="d"
+             Background="White"
+             d:DesignHeight="450" d:DesignWidth="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <!--Lehetőségek -->
+        <Grid Grid.Column="0" Margin="5">
+  
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <!--Számlaszám-->
+            <TextBlock Margin=" 5 5 0 5" Text="Számlaszáma:"></TextBlock>
+            <TextBox x:Name="Szamlaszam" Height="25" Margin="5" Grid.Row="1"  ></TextBox>
+            <!--számlattípus-->
+            <TextBlock Margin=" 5 5 0 5" Grid.Row="2" Text="Számlatípus:"></TextBlock>
+            <ComboBox x:Name="SzamlaTipusok" DisplayMemberPath="Megnevezes" SelectedItem="{Binding Path=SelectedSzamlaTipus}" Height="25" Margin="5" Grid.Row="3"  ></ComboBox>
+            <!--Összeg-->
+            <TextBlock Margin=" 5 5 0 5" Grid.Row="4" Text="Összeg:"></TextBlock>
+            <TextBox x:Name="Osszeg" Text="{Binding Path=Osszeg, StringFormat={}{0:C0}, ConverterCulture= hu-HU }" Height="25" Margin="5" Grid.Row="5"  ></TextBox>
+            <!--Áfa mentes-->
+            <CheckBox  x:Name="IsAfaMentes"  Margin=" 5 5 0 5" Grid.Row="6">Áfa mentes</CheckBox>
+            <TextBlock Margin=" 5 5 0 5" Grid.Row="7">Áfa mentes összeg:</TextBlock>
+            <TextBox Text="{Binding Path=AfaMentesOsszeg, StringFormat={}{0:C0}, ConverterCulture= hu-HU }" IsEnabled="{ Binding ElementName=IsAfaMentes, Path=IsChecked}"  Height="25" Margin="5" Grid.Row="8"  ></TextBox>
+            <!---Gomb-->
+            <Button x:Name="Calculate" Padding="10" Margin="5" Grid.Row="9"> Kalkuláció</Button>
+        </Grid>
+       
+            
+        
+        <!--Kalkuláció megjelenítése-->
+        <Grid Margin="5" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                
+            </Grid.RowDefinitions>
+            <DataGrid Grid.Row="1" x:Name="Felosztasok" AutoGenerateColumns="False" CanUserAddRows="False" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Path=Ukod.Megnevezes}" Width="*" Header="Megnevezés"/>
+                    <DataGridTextColumn Binding="{Binding Path=Ukod.Kod}"  Width="*" Header="Ukód"/>
+                    <DataGridTextColumn Binding="{Binding Path=Xkod.Kod}"  Width="*" Header="Xkód"/>
+                    <DataGridTextColumn Binding="{Binding Path=Percentage}"  Width="0.5*" Header="%"/>
+                    <DataGridTextColumn Binding="{Binding Path=NettoOsszeg}"  Width="*" Header="Nettó"/>
+                    <DataGridTextColumn Binding="{Binding Path=AfaOsszeg}"  Width="*" Header="Áfa"/>
+                    <DataGridTextColumn Binding="{Binding Path=Osszesen}"  Width="*" Header="Bruttó"/>
+                    
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Grid>
+</UserControl>

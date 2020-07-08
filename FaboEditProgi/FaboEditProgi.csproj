@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\bill.png" />
+    <None Remove="Icons\exit.png" />
+    <None Remove="Icons\home.png" />
+    <None Remove="Icons\modosit.png" />
+    <None Remove="Icons\print.png" />
+    <None Remove="Icons\printpre.png" />
+    <None Remove="Icons\torles.png" />
+    <None Remove="Icons\uj.png" />
+    <None Remove="Icons\ukod.png" />
+    <None Remove="Icons\xkod.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Caliburn.Micro" Version="4.0.136-rc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Helper\Writer\" />
+    <Folder Include="Helper\Reader\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Icons\bill.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\exit.png" />
+    <Resource Include="Icons\modosit.png" />
+    <Resource Include="Icons\print.png" />
+    <Resource Include="Icons\printpre.png" />
+    <Resource Include="Icons\torles.png" />
+    <Resource Include="Icons\uj.png" />
+    <Resource Include="Icons\ukod.png" />
+    <Resource Include="Icons\xkod.png" />
+  </ItemGroup>
+
+</Project>

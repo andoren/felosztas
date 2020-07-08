@@ -1,0 +1,141 @@
+﻿<Window x:Class="FaboEditProgi.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FaboEditProgi.Views"
+        mc:Ignorable="d" WindowStyle="SingleBorderWindow" 
+        Title="Felosztás" Height="600" Width="1000" FontSize="16" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu  >
+            <MenuItem  >
+                <MenuItem.Icon>
+                    <Image Source="/Icons/home.png" />
+                </MenuItem.Icon>
+                <MenuItem.Header>
+                    <TextBlock VerticalAlignment="Center">Főoldal</TextBlock>
+                </MenuItem.Header>
+            </MenuItem>
+            <MenuItem>
+                <MenuItem.Header>
+                    <TextBlock VerticalAlignment="Center">Számlatípus</TextBlock>
+                </MenuItem.Header>
+                <MenuItem.Icon>
+                    <Image Source="/Icons/xkod.png"/>
+                </MenuItem.Icon>
+                <MenuItem Header ="Új">
+                    <MenuItem.Icon>
+                        <Image Source="/Icons/uj.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+
+                <MenuItem Header ="Módosítás">
+                    <MenuItem.Icon>
+                        <Image Source="/Icons/modosit.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+
+                <MenuItem Header ="Törlés" >
+                    <MenuItem.Icon>
+                        <Image Source="/Icons/torles.png"/>
+                    </MenuItem.Icon>
+
+                </MenuItem>
+
+
+            </MenuItem>
+            <MenuItem >
+                <MenuItem.Header>
+                    <TextBlock VerticalAlignment="Center">Ukód</TextBlock>
+                </MenuItem.Header>
+                <MenuItem.Icon>
+                    <Image Source="/Icons/xkod.png"/>
+                </MenuItem.Icon>
+                <MenuItem Header ="Új">
+                    <MenuItem.Icon>
+                        <Image Source="/Icons/uj.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+
+                <MenuItem Header ="Módosítás">
+                    <MenuItem.Icon>
+                        <Image Source="/Icons/modosit.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+
+                <MenuItem Header ="Törlés" >
+                    <MenuItem.Icon>
+                        <Image Source="/Icons/torles.png"/>
+                    </MenuItem.Icon>
+
+                </MenuItem>
+            </MenuItem>
+            <MenuItem>
+                <MenuItem.Header>
+                    <TextBlock VerticalAlignment="Center">Xkód</TextBlock>
+                </MenuItem.Header>
+                <MenuItem.Icon>
+                    <Image Source="/Icons/xkod.png"/>
+                </MenuItem.Icon>
+                <MenuItem Header ="Új">
+                    <MenuItem.Icon>
+                        <Image Source="/Icons/uj.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+
+                <MenuItem Header ="Módosítás">
+                    <MenuItem.Icon>
+                        <Image Source="/Icons/modosit.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+
+                <MenuItem Header ="Törlés" >
+                    <MenuItem.Icon>
+                        <Image Source="/Icons/torles.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
+
+            </MenuItem>
+            <MenuItem >
+                <MenuItem.Header>
+                    <TextBlock VerticalAlignment="Center">Nyomtatás</TextBlock>
+                </MenuItem.Header>
+                <MenuItem.Icon>
+                    <Image Source="/Icons/print.png"/>
+                </MenuItem.Icon>
+                <MenuItem Header="Nyomtatási kép">
+                    <MenuItem.Icon>
+                        <Image Source="/Icons/printpre.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Nyomtatás">
+                    <MenuItem.Icon>
+                        <Image Source="/Icons/print.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            
+            <MenuItem x:Name="ExitWindow">
+                <MenuItem.Header>
+                    <TextBlock VerticalAlignment="Center">Kilépés</TextBlock>
+                </MenuItem.Header>
+                <MenuItem.Icon>
+                    <Image Source="/Icons/exit.png"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </Menu>
+        <ContentControl x:Name="ActiveItem" Grid.Row="1"/>
+
+    </Grid>
+</Window>
