@@ -4818,11 +4818,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oszsz_17\\source\\repos\\FaboEditProgi\\FaboEditProgi\\FaboEditProgi.csproj",
+      "projectUniqueName": "E:\\Repos\\Felosztas\\FaboEditProgi\\FaboEditProgi.csproj",
       "projectName": "FaboEditProgi",
-      "projectPath": "C:\\Users\\oszsz_17\\source\\repos\\FaboEditProgi\\FaboEditProgi\\FaboEditProgi.csproj",
+      "projectPath": "E:\\Repos\\Felosztas\\FaboEditProgi\\FaboEditProgi.csproj",
       "packagesPath": "C:\\Users\\oszsz_17\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oszsz_17\\source\\repos\\FaboEditProgi\\FaboEditProgi\\obj\\",
+      "outputPath": "E:\\Repos\\Felosztas\\FaboEditProgi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\oszsz_17\\AppData\\Roaming\\NuGet\\NuGet.Config",

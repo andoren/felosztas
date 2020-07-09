@@ -6,12 +6,17 @@ namespace FaboEditProgi.Models
 {
     class XkodModel
     {
-        public XkodModel(int Id, string Megnevezes, string Kod,UkodModel Ukod)
+        public XkodModel(int Id, string Megnevezes, string Kod,UkodModel Ukod):this(Id,Megnevezes,Kod)
+        {
+
+            this.Ukod = Ukod;
+        }
+        public XkodModel(int Id, string Megnevezes, string Kod)
         {
             this.Id = Id;
             this.Megnevezes = Megnevezes;
             this.Kod = Kod;
-            this.Ukod = Ukod;
+           
         }
         private int _id;
 

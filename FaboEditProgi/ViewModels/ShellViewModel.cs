@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using FaboEditProgi.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +10,7 @@ namespace FaboEditProgi.ViewModels
     {
         public ShellViewModel()
         {
-            ActivateItemAsync(new FelosztasViewModel());
+            ActivateItemAsync(new FelosztasViewModel(new Calculator()));
         }
         public void ExitWindow()
         {
