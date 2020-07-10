@@ -8,6 +8,7 @@
              Background="White"
              
              d:DesignHeight="450" d:DesignWidth="1000">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -56,15 +57,16 @@
                 <RowDefinition Height="*"/>
                 
             </Grid.RowDefinitions>
-            <DataGrid Grid.Row="1"   x:Name="Felosztasok" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" >
+            <DataGrid Grid.Row="1" AlternatingRowBackground="LightGray"   x:Name="Felosztasok" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" >
+                
                 <DataGrid.Columns>
-                    <DataGridTextColumn TextBlock.TextAlignment="Center"  Binding="{Binding Path=Xkod.Megnevezes}" Width="auto" Header="Megnevezés"/>
-                    <DataGridTextColumn  TextBlock.TextAlignment="Center" Binding="{Binding Path=Ukod.Kod}"  Width="*" Header="Ukód"/>
-                    <DataGridTextColumn  TextBlock.TextAlignment="Center" Binding="{Binding Path=Xkod.Kod}"  Width="*" Header="Xkód"/>
-                    <DataGridTextColumn  TextBlock.TextAlignment="Center" Binding="{Binding Path=Percentage}"  Width="0.5*" Header="%"/>
-                    <DataGridTextColumn  TextBlock.TextAlignment="Center" Binding="{Binding Path=NettoOsszeg , StringFormat={}{0:C0}, ConverterCulture= hu-HU }"  Width="*" Header="Nettó"/>
-                    <DataGridTextColumn  TextBlock.TextAlignment="Center" Binding="{Binding Path=AfaOsszeg , StringFormat={}{0:C0}, ConverterCulture= hu-HU }"  Width="*" Header="Áfa"/>
-                    <DataGridTextColumn  TextBlock.TextAlignment="Center" Binding="{Binding Path=Osszesen , StringFormat={}{0:C0}, ConverterCulture= hu-HU }"  Width="*" Header="Bruttó"/>
+                    <DataGridTextColumn  Binding="{Binding Path=Xkod.Megnevezes}" Width="auto" Header="Megnevezés"/>
+                    <DataGridTextColumn  Binding="{Binding Path=Ukod.Kod}"  Width="*" Header="Ukód"/>
+                    <DataGridTextColumn  Binding="{Binding Path=Xkod.Kod}"  Width="*" Header="Xkód"/>
+                    <DataGridTextColumn  Binding="{Binding Path=Percentage}"  Width="0.5*" Header="%"/>
+                    <DataGridTextColumn  Binding="{Binding Path=NettoOsszeg , StringFormat={}{0:C0}, ConverterCulture= hu-HU }"  Width="*" Header="Nettó"/>
+                    <DataGridTextColumn  Binding="{Binding Path=AfaOsszeg , StringFormat={}{0:C0}, ConverterCulture= hu-HU }"  Width="*" Header="Áfa"/>
+                    <DataGridTextColumn  Binding="{Binding Path=Osszesen , StringFormat={}{0:C0}, ConverterCulture= hu-HU }"  Width="*" Header="Bruttó"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+using FaboEditProgi.Models.Manager;
 using FaboEditProgi.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,9 @@ namespace FaboEditProgi
         }
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
+
+            XMLUkodManager manager = new XMLUkodManager();
+ 
             DisplayRootViewFor<ShellViewModel>();
         }
     }

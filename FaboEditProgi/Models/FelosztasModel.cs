@@ -4,8 +4,12 @@ using System.Text;
 
 namespace FaboEditProgi.Models
 {
-    class FelosztasModel
+    public class FelosztasModel
     {
+        public FelosztasModel()
+        {
+
+        }
         public FelosztasModel(int Id, UkodModel Ukod, XkodModel Xkod, int Percentage, int AfaMertek,decimal TeljesOsszeg):this(Id,Ukod,Xkod,Percentage,AfaMertek)
         {
 

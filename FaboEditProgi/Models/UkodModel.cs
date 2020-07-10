@@ -4,8 +4,12 @@ using System.Text;
 
 namespace FaboEditProgi.Models
 {
-    class UkodModel
+    public class UkodModel
     {
+        public UkodModel()
+        {
+
+        }
         public UkodModel(int Id, string Megnevezes,string Kod)
         {
             this.Id = Id;

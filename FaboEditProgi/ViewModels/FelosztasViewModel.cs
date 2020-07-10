@@ -83,7 +83,9 @@ namespace FaboEditProgi.ViewModels
         public decimal AfaMentesOsszeg
         {
             get { return _afaMentesOsszeg; }
-            set { _afaMentesOsszeg = value; }
+            set { _afaMentesOsszeg = value;
+                NotifyOfPropertyChange(()=>CanCalculate);
+            }
         }
 
         private BindableCollection<FelosztasModel> _felosztasok;
@@ -98,7 +100,13 @@ namespace FaboEditProgi.ViewModels
         }
         public bool CanCalculate {
             get {
-                return SelectedSzamlaTipus != null && !string.IsNullOrEmpty(Szamlaszam) && !string.IsNullOrWhiteSpace(Szamlaszam) && Osszeg !=0;
+                bool can = true;
+                if (SelectedSzamlaTipus == null) can = false;
+                else if (string.IsNullOrEmpty(Szamlaszam) && string.IsNullOrWhiteSpace(Szamlaszam)) can = false;
+                else if (Osszeg == 0) can = false;
+                else if (IsAfaMentes) if (AfaMentesOsszeg == 0) can = false;
+
+                return can;          
             }
         }
         public void Calculate() {

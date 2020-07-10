@@ -4,8 +4,12 @@ using System.Text;
 
 namespace FaboEditProgi.Models
 {
-    class SzamlaModel
+   public  class SzamlaModel
     {
+        public SzamlaModel()
+        {
+
+        }
         private int _id;
 
         public int Id

@@ -54,3 +54,4 @@ E:\Repos\Felosztas\FaboEditProgi\obj\Debug\netcoreapp3.0\FaboEditProgi.AssemblyI
 E:\Repos\Felosztas\FaboEditProgi\obj\Debug\netcoreapp3.0\FaboEditProgi.csproj.CopyComplete
 E:\Repos\Felosztas\FaboEditProgi\obj\Debug\netcoreapp3.0\FaboEditProgi.dll
 E:\Repos\Felosztas\FaboEditProgi\obj\Debug\netcoreapp3.0\FaboEditProgi.pdb
+E:\Repos\Felosztas\FaboEditProgi\bin\Debug\netcoreapp3.0\Data\Information.txt
