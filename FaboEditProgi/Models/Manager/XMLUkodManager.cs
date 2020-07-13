@@ -26,6 +26,7 @@ namespace FaboEditProgi.Models.Manager
             if (!File.Exists(defaultPath))
             {
                 File.Create(defaultPath).Close();
+                WriteXml(new BindableCollection<UkodModel>());
             }
           
 
@@ -37,6 +38,15 @@ namespace FaboEditProgi.Models.Manager
             {
                 
                 BindableCollection<UkodModel> adatok = GetAllUkod();
+                int id = 0;
+                try
+                {
+                    id = adatok.Max(x => x.Id);
+                }
+                catch (Exception) { 
+                    
+                }
+                ukod.Id = id + 1;
                 adatok.Add(ukod);
                 WriteXml(adatok);
             }

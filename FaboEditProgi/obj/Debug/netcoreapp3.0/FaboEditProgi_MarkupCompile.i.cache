@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_0
 E:\Repos\Felosztas\FaboEditProgi\App.xaml
-2938356499
-3-1312256826
-18-918583715
+3-1714130766
+4-447411012
+20-347741405
 202-326433566
-Views\FelosztasView.xaml;Views\ShellView.xaml;
+Views\FelosztasView.xaml;Views\ShellView.xaml;Views\UkodView.xaml;
 
 False
 

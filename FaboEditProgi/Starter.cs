@@ -17,7 +17,7 @@ namespace FaboEditProgi
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
 
-            XMLUkodManager manager = new XMLUkodManager();
+           
  
             DisplayRootViewFor<ShellViewModel>();
         }

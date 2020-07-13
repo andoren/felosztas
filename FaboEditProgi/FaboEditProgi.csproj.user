@@ -12,6 +12,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\UkodView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\FelosztasView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -20,6 +23,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\UKodView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\FelosztasView.xaml">
       <SubType>Designer</SubType>
     </Page>

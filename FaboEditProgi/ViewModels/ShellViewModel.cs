@@ -16,5 +16,11 @@ namespace FaboEditProgi.ViewModels
         {
             TryCloseAsync();
         }
+        public void Ukod() {
+            ActivateItemAsync(new UKodViewModel());
+        }
+        public void Home() {
+            ActivateItemAsync(new FelosztasViewModel(new Calculator()));
+        }
     }
 }

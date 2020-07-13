@@ -11,5 +11,6 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("data/information.txt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/bill.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/home.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/printericon.png")]
 
 

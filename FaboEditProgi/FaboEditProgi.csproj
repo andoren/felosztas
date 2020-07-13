@@ -13,6 +13,7 @@
     <None Remove="Icons\home.png" />
     <None Remove="Icons\modosit.png" />
     <None Remove="Icons\print.png" />
+    <None Remove="Icons\printericon.png" />
     <None Remove="Icons\printpre.png" />
     <None Remove="Icons\torles.png" />
     <None Remove="Icons\uj.png" />
@@ -37,6 +38,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Icons\home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\printericon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

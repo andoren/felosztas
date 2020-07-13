@@ -25,17 +25,17 @@ namespace FaboEditProgi.Models.Service
 
         public BindableCollection<UkodModel> GetAllUkod()
         {
-            return GetAllUkod();
+            return manager.GetAllUkod();
         }
 
         public UkodModel GetUkodById(int id)
         {
-            return GetUkodById(id);
+            return manager.GetUkodById(id);
         }
 
         public bool ModifyUkod(UkodModel ukod)
         {
-            return ModifyUkod(ukod);
+            return manager.ModifyUkod(ukod);
         }
     }
 }
